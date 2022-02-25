@@ -5,70 +5,83 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = LoadingIcon;
 
+var _jsxRuntime = require("react/jsx-runtime");
+
 function LoadingIcon(props) {
-  return /*#__PURE__*/React.createElement(React.Fragment, null, props.selfalign ? /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      marginTop: 10,
-      width: '100%',
-      justifyContent: 'center',
-      alignItems: 'center'
-    }
-  }, /*#__PURE__*/React.createElement("svg", {
-    style: props.styles,
-    width: "38",
-    height: "38",
-    viewBox: "0 0 42 42",
-    xmlns: "http://www.w3.org/2000/svg",
-    stroke: props.color
-  }, /*#__PURE__*/React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd"
-  }, /*#__PURE__*/React.createElement("g", {
-    xmlns: "http://www.w3.org/2000/svg",
-    transform: "translate(3 3)",
-    strokeWidth: "5"
-  }, /*#__PURE__*/React.createElement("circle", {
-    strokeOpacity: ".5",
-    cx: "18",
-    cy: "18",
-    r: "18"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M36 18c0-9.94-8.06-18-18-18"
-  }, /*#__PURE__*/React.createElement("animateTransform", {
-    attributeName: "transform",
-    type: "rotate",
-    from: "0 18 18",
-    to: "360 18 18",
-    dur: "0.5s",
-    repeatCount: "indefinite"
-  })))))) : /*#__PURE__*/React.createElement("svg", {
-    style: props.styles,
-    width: "38",
-    height: "38",
-    viewBox: "0 0 42 42",
-    xmlns: "http://www.w3.org/2000/svg",
-    stroke: props.color
-  }, /*#__PURE__*/React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd"
-  }, /*#__PURE__*/React.createElement("g", {
-    xmlns: "http://www.w3.org/2000/svg",
-    transform: "translate(3 3)",
-    strokeWidth: "5"
-  }, /*#__PURE__*/React.createElement("circle", {
-    strokeOpacity: ".5",
-    cx: "18",
-    cy: "18",
-    r: "18"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M36 18c0-9.94-8.06-18-18-18"
-  }, /*#__PURE__*/React.createElement("animateTransform", {
-    attributeName: "transform",
-    type: "rotate",
-    from: "0 18 18",
-    to: "360 18 18",
-    dur: "0.5s",
-    repeatCount: "indefinite"
-  }))))));
+  return /*#__PURE__*/(0, _jsxRuntime.jsx)(_jsxRuntime.Fragment, {
+    children: props.selfalign ? /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
+      style: {
+        display: 'flex',
+        marginTop: 10,
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center'
+      },
+      children: /*#__PURE__*/(0, _jsxRuntime.jsx)("svg", {
+        style: props.styles,
+        width: "38",
+        height: "38",
+        viewBox: "0 0 42 42",
+        xmlns: "http://www.w3.org/2000/svg",
+        stroke: props.color,
+        children: /*#__PURE__*/(0, _jsxRuntime.jsx)("g", {
+          fill: "none",
+          fillRule: "evenodd",
+          children: /*#__PURE__*/(0, _jsxRuntime.jsxs)("g", {
+            xmlns: "http://www.w3.org/2000/svg",
+            transform: "translate(3 3)",
+            strokeWidth: "5",
+            children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("circle", {
+              strokeOpacity: ".5",
+              cx: "18",
+              cy: "18",
+              r: "18"
+            }), /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+              d: "M36 18c0-9.94-8.06-18-18-18",
+              children: /*#__PURE__*/(0, _jsxRuntime.jsx)("animateTransform", {
+                attributeName: "transform",
+                type: "rotate",
+                from: "0 18 18",
+                to: "360 18 18",
+                dur: "0.5s",
+                repeatCount: "indefinite"
+              })
+            })]
+          })
+        })
+      })
+    }) : /*#__PURE__*/(0, _jsxRuntime.jsx)("svg", {
+      style: props.styles,
+      width: "38",
+      height: "38",
+      viewBox: "0 0 42 42",
+      xmlns: "http://www.w3.org/2000/svg",
+      stroke: props.color,
+      children: /*#__PURE__*/(0, _jsxRuntime.jsx)("g", {
+        fill: "none",
+        fillRule: "evenodd",
+        children: /*#__PURE__*/(0, _jsxRuntime.jsxs)("g", {
+          xmlns: "http://www.w3.org/2000/svg",
+          transform: "translate(3 3)",
+          strokeWidth: "5",
+          children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("circle", {
+            strokeOpacity: ".5",
+            cx: "18",
+            cy: "18",
+            r: "18"
+          }), /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+            d: "M36 18c0-9.94-8.06-18-18-18",
+            children: /*#__PURE__*/(0, _jsxRuntime.jsx)("animateTransform", {
+              attributeName: "transform",
+              type: "rotate",
+              from: "0 18 18",
+              to: "360 18 18",
+              dur: "0.5s",
+              repeatCount: "indefinite"
+            })
+          })]
+        })
+      })
+    })
+  });
 }

@@ -9,6 +9,8 @@ var _react = require("react");
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _jsxRuntime = require("react/jsx-runtime");
+
 var _templateObject;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -48,22 +50,24 @@ class Input extends _react.Component {
       });
     }
 
-    return /*#__PURE__*/React.createElement("div", {
-      className: this.props.className
-    }, this.props.label ? /*#__PURE__*/React.createElement("label", {
-      htmlFor: this.props.type
-    }, this.props.label, ":") : null, /*#__PURE__*/React.createElement(TextareaElement, {
-      onBlur: this.props.onBlur,
-      onFocus: this.props.onFocus,
-      error: this.state.errored ? true : false,
-      id: this.props.type,
-      placeholder: this.props.placeholder,
-      "data-name": this.props.type,
-      value: this.state.value || '',
-      disabled: this.props.disabled,
-      style: this.props.styles,
-      onChange: this.handleChange
-    }));
+    return /*#__PURE__*/(0, _jsxRuntime.jsxs)("div", {
+      className: this.props.className,
+      children: [this.props.label ? /*#__PURE__*/(0, _jsxRuntime.jsxs)("label", {
+        htmlFor: this.props.type,
+        children: [this.props.label, ":"]
+      }) : null, /*#__PURE__*/(0, _jsxRuntime.jsx)(TextareaElement, {
+        onBlur: this.props.onBlur,
+        onFocus: this.props.onFocus,
+        error: this.state.errored ? true : false,
+        id: this.props.type,
+        placeholder: this.props.placeholder,
+        "data-name": this.props.type,
+        value: this.state.value || '',
+        disabled: this.props.disabled,
+        style: this.props.styles,
+        onChange: this.handleChange
+      })]
+    });
   }
 
 }
