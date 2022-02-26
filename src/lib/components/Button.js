@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import LoadingIcon from './LoadingIcon'
+import PropTypes from 'prop-types';
 const ButtonElement = styled.button`
     border: none;
     background: ${props => props.negative ? 'rgb(255 67 113)' : 'var(--brand)'};
@@ -35,8 +36,20 @@ const ButtonElement = styled.button`
         transform: scale(0.95);
     }
 `
-export default function Button(props){
+function Button(props){
 return(
-    <ButtonElement style={props.styles} onClick={props.action} negative={props.negative} loading={props.loading} disabled={props.disabled}><p>{props.children || props.text}</p><div><LoadingIcon color="#ffffff"/></div></ButtonElement>
+    <ButtonElement style={props.styles} onClick={props.onClick || props.action} negative={props.negative} loading={props.loading} disabled={props.loading || props.disabled}><p>{props.children || props.text}</p><div><LoadingIcon color="#ffffff"/></div></ButtonElement>
 )
 }
+
+Button.propTypes = {
+    styles: PropTypes.object,
+    onClick: PropTypes.func,
+    action: PropTypes.func,
+    negative: PropTypes.bool,
+    loading: PropTypes.bool,
+    disabled: PropTypes.bool,
+    text: PropTypes.string,
+}
+
+export default Button;

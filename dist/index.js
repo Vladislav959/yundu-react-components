@@ -33,12 +33,6 @@ Object.defineProperty(exports, "Textarea", {
     return _Textarea.default;
   }
 });
-Object.defineProperty(exports, "apiCall", {
-  enumerable: true,
-  get: function get() {
-    return _initApiCall.default;
-  }
-});
 
 var _Input = _interopRequireDefault(require("./components/Input"));
 
@@ -47,8 +41,6 @@ var _BackButton = _interopRequireDefault(require("./components/BackButton"));
 var _Button = _interopRequireDefault(require("./components/Button"));
 
 var _LoadingIcon = _interopRequireDefault(require("./components/LoadingIcon"));
-
-var _initApiCall = _interopRequireDefault(require("./components/initApiCall"));
 
 var _Textarea = _interopRequireDefault(require("./components/Textarea"));
 

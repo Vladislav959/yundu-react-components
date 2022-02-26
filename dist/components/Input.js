@@ -9,6 +9,8 @@ var _react = require("react");
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var _jsxRuntime = require("react/jsx-runtime");
 
 var _templateObject;
@@ -59,10 +61,10 @@ class Input extends _react.Component {
         onBlur: this.props.onBlur,
         onFocus: this.props.onFocus,
         type: this.props.type === 'password' ? 'password' : 'text',
-        error: this.state.errored ? true : false,
-        id: this.props.type,
+        error: this.state.errored,
+        id: this.props.id || this.props.type,
         placeholder: this.props.placeholder,
-        "data-name": this.props.type,
+        "data-name": this.props.id || this.props.type || null,
         value: this.state.value || '',
         disabled: this.props.disabled,
         style: this.props.styles,
@@ -73,4 +75,18 @@ class Input extends _react.Component {
 
 }
 
-exports.default = Input;
+Input.propTypes = {
+  label: _propTypes.default.string,
+  className: _propTypes.default.string,
+  type: _propTypes.default.string,
+  onBlur: _propTypes.default.func,
+  onFocus: _propTypes.default.func,
+  errored: _propTypes.default.bool,
+  id: _propTypes.default.string,
+  placeholder: _propTypes.default.string,
+  value: _propTypes.default.string,
+  disabled: _propTypes.default.bool,
+  styles: _propTypes.default.object
+};
+var _default = Input;
+exports.default = _default;

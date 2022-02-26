@@ -3,9 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = LoadingIcon;
+exports.default = void 0;
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _jsxRuntime = require("react/jsx-runtime");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function LoadingIcon(props) {
   return /*#__PURE__*/(0, _jsxRuntime.jsx)(_jsxRuntime.Fragment, {
@@ -85,3 +89,11 @@ function LoadingIcon(props) {
     })
   });
 }
+
+LoadingIcon.propTypes = {
+  selfalign: _propTypes.default.bool,
+  styles: _propTypes.default.object,
+  color: _propTypes.default.string
+};
+var _default = LoadingIcon;
+exports.default = _default;

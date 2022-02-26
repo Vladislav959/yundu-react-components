@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 const BackButtonElement = styled.button`
     border: none;
     background: var(--brand);
@@ -12,7 +13,7 @@ const BackButtonElement = styled.button`
     font-size: 0.9em;
     margin-top: 7px;
     transition: background .3s;
- margin-right:10px;
+    margin-right:10px;
 & p{
     color:#fff;
     margin-left:4px;
@@ -31,8 +32,16 @@ const BackButtonElement = styled.button`
 ) translate(0px,-3px);
 }
 `
-export default function Button(props){
+function Button(props){
 return(
-    <BackButtonElement style={props.styles} onClick={props.action}><p>Назад</p></BackButtonElement>
+    <BackButtonElement style={props.styles} onClick={props.onClick || props.action}><p style={{display: props.notext ? 'none' : 'block'}}>Назад</p></BackButtonElement>
 ) 
 }
+
+Button.propTypes = {
+    styles: PropTypes.object,
+    action: PropTypes.func,
+    onClick: PropTypes.func,
+    notext: PropTypes.bool
+}
+export default Button;

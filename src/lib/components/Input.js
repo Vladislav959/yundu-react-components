@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import styled from 'styled-components';
+import PropTypes from 'prop-types'
 const InputElement = styled.input`
     border: 2.2px solid var(--border-color);
     border-radius: 10px;
@@ -20,7 +21,7 @@ const InputElement = styled.input`
         border-color: #ededed;
     }
 `
-export default class Input extends Component{
+class Input extends Component{
     constructor(props){
         super(props);
         this.state = {value:this.props.content,initiate:this.props.content,errored:false}
@@ -43,7 +44,23 @@ export default class Input extends Component{
     return(
         <div className={this.props.className}>
         {this.props.label ? <label htmlFor={this.props.type}>{this.props.label}:</label> : null}
-        <InputElement onBlur={this.props.onBlur} onFocus={this.props.onFocus} type={this.props.type === 'password' ? 'password' : 'text'} error={this.state.errored ? true : false} id={this.props.type} placeholder={this.props.placeholder} data-name={this.props.type} value={this.state.value || ''} disabled={this.props.disabled} style={this.props.styles} onChange={this.handleChange}/>
+        <InputElement onBlur={this.props.onBlur} onFocus={this.props.onFocus} type={this.props.type === 'password' ? 'password' : 'text'} error={this.state.errored} id={this.props.id || this.props.type} placeholder={this.props.placeholder} data-name={this.props.id || this.props.type || null} value={this.state.value || ''} disabled={this.props.disabled} style={this.props.styles} onChange={this.handleChange}/>
         </div>
     )
 }}
+
+Input.propTypes = {
+    label: PropTypes.string,
+    className: PropTypes.string,
+    type: PropTypes.string,
+    onBlur: PropTypes.func,
+    onFocus: PropTypes.func,
+    errored: PropTypes.bool,
+    id: PropTypes.string,
+    placeholder: PropTypes.string,
+    value: PropTypes.string,
+    disabled: PropTypes.bool,
+    styles: PropTypes.object
+}
+
+export default Input;

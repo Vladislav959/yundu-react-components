@@ -1,4 +1,5 @@
-export default function LoadingIcon(props){
+import PropTypes from 'prop-types';
+function LoadingIcon(props){
     return(
         <>
         {props.selfalign ? 
@@ -29,3 +30,9 @@ export default function LoadingIcon(props){
         </>
     )
 }
+LoadingIcon.propTypes = {
+    selfalign: PropTypes.bool,
+    styles: PropTypes.object,
+    color: PropTypes.string
+}
+export default LoadingIcon;

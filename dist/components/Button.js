@@ -3,11 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = Button;
+exports.default = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _LoadingIcon = _interopRequireDefault(require("./LoadingIcon"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _jsxRuntime = require("react/jsx-runtime");
 
@@ -22,10 +24,10 @@ const ButtonElement = _styledComponents.default.button(_templateObject || (_temp
 function Button(props) {
   return /*#__PURE__*/(0, _jsxRuntime.jsxs)(ButtonElement, {
     style: props.styles,
-    onClick: props.action,
+    onClick: props.onClick || props.action,
     negative: props.negative,
     loading: props.loading,
-    disabled: props.disabled,
+    disabled: props.loading || props.disabled,
     children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("p", {
       children: props.children || props.text
     }), /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
@@ -35,3 +37,15 @@ function Button(props) {
     })]
   });
 }
+
+Button.propTypes = {
+  styles: _propTypes.default.object,
+  onClick: _propTypes.default.func,
+  action: _propTypes.default.func,
+  negative: _propTypes.default.bool,
+  loading: _propTypes.default.bool,
+  disabled: _propTypes.default.bool,
+  text: _propTypes.default.string
+};
+var _default = Button;
+exports.default = _default;
