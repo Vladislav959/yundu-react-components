@@ -49,7 +49,34 @@ Button.propTypes = {
     negative: PropTypes.bool,
     loading: PropTypes.bool,
     disabled: PropTypes.bool,
-    text: PropTypes.string,
+    text: (props, propName, componentName) => {
+        if (!props.icon && !props.title) {
+          return new Error(`One of props 'text' or 'children' was not specified in '${componentName}'.`)
+        }
+        if (props.text) {
+          PropTypes.checkPropTypes({
+            text: PropTypes.string,
+          },
+          { text: props.text },
+          'prop',
+          'Button')
+        }
+        return null
+      },
+    children: (props, propName, componentName) => {
+        if (!props.icon && !props.title) {
+          return new Error(`One of props 'text' or 'children' was not specified in '${componentName}'.`)
+        }
+        if (props.children) {
+          PropTypes.checkPropTypes({
+            children: PropTypes.string,
+          },
+          { children: props.children },
+          'prop',
+          'Button')
+        }
+        return null
+      }
 }
 
 export default Button;

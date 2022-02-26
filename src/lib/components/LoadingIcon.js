@@ -33,6 +33,6 @@ function LoadingIcon(props){
 LoadingIcon.propTypes = {
     selfalign: PropTypes.bool,
     styles: PropTypes.object,
-    color: PropTypes.string
+    color: PropTypes.string.isRequired
 }
 export default LoadingIcon;
