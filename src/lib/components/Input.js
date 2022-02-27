@@ -14,7 +14,7 @@ const InputElement = styled.input`
     transition: border-color .3s;
     border-color:${props => props.error ? 'rgb(255 0 60)' : 'var(--border-color)'};
     &:focus{
-        border-color:#33d190;
+        border-color:var(--brand);
     }
     &:disabled{
         background: #f8f8f8;

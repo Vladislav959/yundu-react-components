@@ -63,3 +63,4 @@ Textarea.propTypes = {
     disabled: PropTypes.bool,
     styles: PropTypes.object
 }
+export default Textarea;
